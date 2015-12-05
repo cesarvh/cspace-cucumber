@@ -313,9 +313,10 @@ Feature: Structured Objects- QA Test Plan
 		Then the "Identification Number" field should contain "2013.12.1a.1"
 		# then te record should match 2013.12.a1 but with ID "2013.12.1a.1" and w/o related records
 
-	###################
-	##### BEGIN 15#####
-	###################
+
+##
+# REMEMBER: GO BACK AND CHECK THE BUG, DELETE STUFF
+##
 
 
 
