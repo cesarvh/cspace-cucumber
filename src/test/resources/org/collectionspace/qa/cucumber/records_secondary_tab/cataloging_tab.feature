@@ -39,7 +39,7 @@ Feature: #Enter feature name here
 
         And the user selects the box with result "CQA99.3" 
         And the user selects the box with result "CQA99.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button   #7
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -90,8 +90,8 @@ Feature: #Enter feature name here
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear #needs StepDef
-        And user clicks the "cancel" button  #might not work
+        Then a leave confirmation dialogue should appear  
+        And user clicks the "cancel" button   
         Then the "Identification Number" field should contain "CQA99.4"
 
         ## Variation D
@@ -121,7 +121,7 @@ Feature: #Enter feature name here
         Given the user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA99_NE"
         And user selects the "Cataloging" tab
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button  
         And user clicks the "Create new" button
 
         # Variation A
@@ -930,12 +930,12 @@ Feature: #Enter feature name here
         And user clicks the "Delete Relation" button on the row that reads "CQA99.7" #Green "X" button. Needs step def. Last time.
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
-        Then "CQA99.7" should not appear in the "Procedures" area #needs StepDef #notlogged
-        Then "CQA99.7" should not appear in the "Related Cataloging Records" area #needs Stepdef #not logged
+        Then "CQA99.7" should not appear in the "Procedures" area   #notlogged
+        Then "CQA99.7" should not appear in the "Related Cataloging Records" area   #not logged
 
         And user goes to the record with identification number "CQA99.7"
         And user selects the "Cataloging" tab 
-        Then "CQA99_NE" should not appear in the "Related Cataloging Records" area  #needs Stepdef
+        Then "CQA99_NE" should not appear in the "Related Cataloging Records" area   
         And user selects the "Current Record" tab
 
         And user clicks on the delete button
@@ -963,9 +963,9 @@ Feature: #Enter feature name here
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks close button # close button == close symbol?
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Cataloging Records" area should contain "CQA99.8"
 
         And user clicks the "Delete this relation" button
@@ -973,7 +973,7 @@ Feature: #Enter feature name here
         And user clicks on the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)
-        Then "CQA99.8" should not appear in the "Procedures" area  #needs Stepdef
+        Then "CQA99.8" should not appear in the "Procedures" area   
         Then "CQA99.8" should not appear in the "Related Cataloging Records" area
 
         And user goes to the record with identification number "CQA99.8"

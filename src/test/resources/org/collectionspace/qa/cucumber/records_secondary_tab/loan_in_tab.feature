@@ -19,39 +19,39 @@ Feature: Loan In Tab
  
 
 	Scenario: Test 3 -> Continued from Test 1
-		And user clicks the "Add record" button #needs step def
+		And user clicks the "Add record" button  
 	    # Then  a pop-up window will appear with the option to add a relationship to an existing record or create a new record
 	    And the user clicks the "close" button 
 	    Then the "Related Loan In Records" area should only contain "CQA111.1"
 
 	    And user clicks the "Add record" button
-	    And the user presses the "ESC" key # Needs StepDef
+	    And the user presses the "ESC" key  
 	    Then the "Related Loan In Records" area should only contain "CQA111.1"
 	
 	Scenario: Test 5-> Searching and ading multiple Loan In records. Continued from Test 3
-		And user clicks the "Add record" button #NeedsStepDef
-	    And the user clicks the "search" button #needs StepDef maybe? 
+		And user clicks the "Add record" button  
+	    And the user clicks the "search" button   maybe? 
 	    Then the search results should contain "CQA111.2"
 	    Then the search results should contain "CQA111.3" 
 
-	    And the user selects the box with result "CQA111.3"  #needs Step def #6
-	    And the user selects the box with result "CQA111.2"  #needs Step def #6 
-	    And the user clicks the "Add to current record" button #needs Step def #7
+	    And the user selects the box with result "CQA111.3"    #6
+	    And the user selects the box with result "CQA111.2"    #6 
+	    And the user clicks the "Add to current record" button   #7
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
-	    Then "CQA111.2" should appear in the "Related Loan In Records" area  #needs Stepdef
-	    Then "CQA111.3" should appear in the "Related Loan In Records" area  #needs Stepdef
-	    Then "CQA111.2" should appear in the "Procedures" area  #needs Stepdef
-	    Then "CQA111.3" should appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA111.2" should appear in the "Related Loan In Records" area   
+	    Then "CQA111.3" should appear in the "Related Loan In Records" area   
+	    Then "CQA111.2" should appear in the "Procedures" area   
+	    Then "CQA111.3" should appear in the "Procedures" area   
 
 
-	    And the user clicks on result with text "CQA111.2" # Might not work. #Change num?
-	    Then an "Edit Loan In Record" form should be displayed # Be more specific? #Needs Stepdef
+	    And the user clicks on result with text "CQA111.2"  . #Change num?
+	    Then an "Edit Loan In Record" form should be displayed # Be more specific?  
 	   	Then the "Loan In Number" field should contain "CQA111.2"
 
 	   	And the user clicks on the result with text "CQA111.3"
-	    Then an "Edit Loan In Record" form should be displayed # Be more specific? #Needs Stepdef
+	    Then an "Edit Loan In Record" form should be displayed # Be more specific?  
 	    Then the "Loan In Number" field should contain "CQA111.3"
 
 
@@ -129,20 +129,20 @@ Feature: Loan In Tab
 		And user goes to the record with identification number "CQA111_NE"
 		
 		And user selects the "Loan In" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And user clicks the "Create new" button
 
 	    # Variation A
 	    Then the message "Creating new record..." should be displayed
-	   	Then the "cancel changes" button at the bottom of the page should not be clickable #needs Stepdef
-	    Then the "cancel changes" button at the top of the page should not be clickable #needs Stepdef
+	   	Then the "cancel changes" button at the bottom of the page should not be clickable  
+	    Then the "cancel changes" button at the top of the page should not be clickable  
 	    
-	    And user enters "CQA111.5" in the "Loan In Number" field #might not work
+	    And user enters "CQA111.5" in the "Loan In Number" field  
 	    And the user clicks the "cancel changes" button 
     	Then the "Loan In Number" field should be empty
 
 	    # Variation B
-	    And user enters "CQA111.5" in the "Loan In Number" field #might not work
+	    And user enters "CQA111.5" in the "Loan In Number" field  
 	    And the user clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
@@ -287,32 +287,32 @@ Feature: Loan In Tab
 	    And user goes to the record with identification number "CQA111_NE"
 	    And user selects the "Loan In" tab 
 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And clicks on the Create button
-	    And user enters "CQA111.6" in the "Loan In Number" field #might not work 
+	    And user enters "CQA111.6" in the "Loan In Number" field   
 	    And the user saves the record
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def
 	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed #needs Step def
+	    Then the dialogue should be dismissed  
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def. Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
+	    And user clicks the "close" button # close button == close symbol?  ???
 	    Then the dialogue should be dismissed
 	    Then the "Related Loan In Records" area should contain "CQA111.6"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA111.6" #Green "X" button. Needs step def. Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA111.6" should not appear in the "Procedures" area #needs StepDef #notlogged
-	    Then "CQA111.6" should not appear in the "Related Loan In Records" area #needs Stepdef #not logged
+	    Then "CQA111.6" should not appear in the "Procedures" area   #notlogged
+	    Then "CQA111.6" should not appear in the "Related Loan In Records" area   #not logged
 
         And user goes to the record with identification number "CQA111.6"
         And user selects the "Loan In" tab 
-	    Then "CQA111_NE" should not appear in the "Related Loan In Records" area  #needs Stepdef
+	    Then "CQA111_NE" should not appear in the "Related Loan In Records" area   
 	    And user selects the "Current Record" tab
 
 	    And the user clicks the delete button
@@ -329,30 +329,30 @@ Feature: Loan In Tab
 	    Then "CQA111_NE" should be in the "Identification Number" field
 
 	    And user selects the "Loan In" tab 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And clicks on the Create button
-	    And user enters "CQA111.7" in the "Loan In Number" field #might not work 
+	    And user enters "CQA111.7" in the "Loan In Number" field   
 	    And the user saves the record
 	    And the user clicks on result with text "CQA111.7"
 
 	    
 	    And the user clicks the "Delete this relation." button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks cancel button # click cancel
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Loan In Records" area should contain "CQA111.7"
 
 	    And the user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks close button # close button == close symbol?
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Loan In Records" area should contain "CQA111.7"
 
 	    And the user clicks the "Delete this relation" button
 	    Then a delete confirmation dialogue should appear #needs Step
 	    And the user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
-	    Then "CQA111.7" should not appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA111.7" should not appear in the "Procedures" area   
 		Then "CQA111.7" should not appear in the "Related Loan In Records Area"
 
 	    And user goes to the record with identification number "CQA111.7"

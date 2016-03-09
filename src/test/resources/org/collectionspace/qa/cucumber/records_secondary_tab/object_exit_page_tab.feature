@@ -40,7 +40,7 @@ Feature: Object Exit Page Tab
 
 	    And the user selects the box with result "CQA115.3" 
 	    And the user selects the box with result "CQA115.2"  
-	    And user clicks the "Add to current record" button #needs Step def #7
+	    And user clicks the "Add to current record" button   #7
 
 	    #Expected, Group #1
 	    Then the dialogue should be dismissed 
@@ -97,8 +97,8 @@ Feature: Object Exit Page Tab
 
 		#Variation B
 		And user selects the "Current Record" tab
-	    Then a leave confirmation dialogue should appear #needs StepDef
-	    And user clicks the "cancel" button  #might not work
+	    Then a leave confirmation dialogue should appear  
+	    And user clicks the "cancel" button   
 	    Then the "Exit Number" field should contain "CQA115.4"
 
 	    ## Variation D
@@ -129,7 +129,7 @@ Feature: Object Exit Page Tab
 		Given the user is in the "My CollectionSpace" page
 		And user goes to the record with identification number "CQA115_NE"
 		And user selects the "Object Exit" tab
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And user clicks the "Create new" button
 
 	    # Variation A
@@ -137,12 +137,12 @@ Feature: Object Exit Page Tab
 	   	Then the "cancel changes" button at the bottom of the page should not be clickable
 	    Then the "cancel changes" button at the top of the page should not be clickable
 	    
-	    And user enters "CQA115.5" in the "Exit Number" field #might not work
+	    And user enters "CQA115.5" in the "Exit Number" field  
 	    And user clicks the "cancel changes" button 
     	Then the "Exit Number" field should be empty
 
 	    # Variation B
-	    And user enters "CQA115.5" in the "Exit Number" field #might not work
+	    And user enters "CQA115.5" in the "Exit Number" field  
 	    And user clicks the "save" button 
 	    Then the "cancel changes" button at the top of the page should not be clickable 
     	Then the "cancel changes" button at the bottom of the page should not be clickable 
@@ -243,32 +243,32 @@ Feature: Object Exit Page Tab
 	    And user goes to the record with identification number "CQA115_NE"
 	    And user selects the "Object Exit" tab 
 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And clicks on the Create button
-	    And user enters "CQA115.7" in the "Exit Number" field #might not work 
+	    And user enters "CQA115.7" in the "Exit Number" field   
 	    And the user saves the record
 	    
 	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7" #Green "X" button. Needs step def
 	    Then delete confirmation dialogue should appear # Then the dialogue should appear asking you to delete this relation
 	    And user clicks cancel button
-	    Then the dialogue should be dismissed #needs Step def
+	    Then the dialogue should be dismissed  
 	    Then the "Related Object Exit Records" area should contain "CQA115.7"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7" #Green "X" button. Needs step def. Again
 	    Then delete confirmation dialogue should appear
-	    And user clicks the "close" button # close button == close symbol? #Needs stepdef???
+	    And user clicks the "close" button # close button == close symbol?  ???
 	    Then the dialogue should be dismissed
 	    Then the "Related Object Exit Records" area should contain "CQA115.7"
 
 	    And user clicks the "Delete Relation" button on the row that reads "CQA115.7" #Green "X" button. Needs step def. Last time.
 	    Then delete confirmation dialogue should appear
 	    And user clicks on the delete button
-	    Then "CQA115.7" should not appear in the "Procedures" area #needs StepDef #notlogged
-	    Then "CQA115.7" should not appear in the "Related Object Exit Records" area #needs Stepdef #not logged
+	    Then "CQA115.7" should not appear in the "Procedures" area   #notlogged
+	    Then "CQA115.7" should not appear in the "Related Object Exit Records" area   #not logged
 
 		And user goes to the record with identification number "CQA115.7"
 	    And user selects the "Object Exit" tab 
-	    Then "CQA115_NE" should not appear in the "Related Object Exit Records" area  #needs Stepdef
+	    Then "CQA115_NE" should not appear in the "Related Object Exit Records" area   
 	    And user selects the "Current Record" tab
 
 	    And the user clicks the delete button
@@ -283,22 +283,22 @@ Feature: Object Exit Page Tab
 	    Then "CQA115_NE" should be in the "Identification Number" field
 
 	    And user selects the "Object Exit" tab 
-	    And user clicks the "Add record" button #needs step def
+	    And user clicks the "Add record" button  
 	    And clicks on the Create button
-	    And user enters "CQA115.8" in the "Exit Number" field #might not work 
+	    And user enters "CQA115.8" in the "Exit Number" field   
 	    And the user saves the record
 	    And the user clicks on result with text "CQA115.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks cancel button # click cancel
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Object Exit Records" area should contain "CQA115.8"
 
 	    And user clicks the "Delete this relation" button
-	    Then a delete confirmation dialogue should appear #needs Stepdef
+	    Then a delete confirmation dialogue should appear  
 	    And user clicks close button # close button == close symbol?
-	    Then the dialogue should be dismissed #needs stepdef
+	    Then the dialogue should be dismissed  
 	    Then the "Related Object Exit Records" area should contain "CQA115.8"
 
 	    And user clicks the "Delete this relation" button
@@ -306,7 +306,7 @@ Feature: Object Exit Page Tab
 	    And the user clicks the delete button 
 	    Then the deletion should be confirmed in a dialogue
 	    # Then the record editor should no longer be displayed (below list)
-	    Then "CQA115.8" should not appear in the "Procedures" area  #needs Stepdef
+	    Then "CQA115.8" should not appear in the "Procedures" area   
 	    Then "CQA115.8" should not appear in the "Related Object Exit Records" area
 
 	    And user goes to the record with identification number "CQA115.8"

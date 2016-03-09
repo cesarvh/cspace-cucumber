@@ -31,8 +31,8 @@ Feature: Advanced Search results Add to Record
         And the user clicks on result with text "CQA-86 Group"
         And user selects the "Cataloging" tab 
 
-        Then "120415.1" should appear in the "Cataloging" sidebar #needs stepdef
-        Then "120415.2" should appear in the "Cataloging" sidebar #needs stepdef
+        Then "120415.1" should appear in the "Cataloging" sidebar  
+        Then "120415.2" should appear in the "Cataloging" sidebar  
 
         Then "CQA86.1" should appear in the "Related Cataloging Records" area
         Then "CQA86.2" should appear in the "Related Cataloging Records" area
@@ -56,7 +56,7 @@ Feature: Advanced Search results Add to Record
         Then the results should contain "CQA86.1"
         Then the results should contain "CQA86.2"
         Then the results should contain "CQA86.3"
-        And the user presses the "Tab" key until reaching the "Add record" button  #needs Stepdef
+        And the user presses the "Tab" key until reaching the "Add record" button   
         And the user presses the "Enter" key
         Then an "Add Search Results to Record" menu should appear
         

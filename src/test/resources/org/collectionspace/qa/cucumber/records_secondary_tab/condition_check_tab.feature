@@ -39,7 +39,7 @@ Feature: Condition Check Tab Test Plan
 
         And the user selects the box with result "CQA103.3" 
         And the user selects the box with result "CQA103.2"  
-        And user clicks the "Add to current record" button #needs Step def #7
+        And user clicks the "Add to current record" button   #7
 
         #Expected, Group #1
         Then the dialogue should be dismissed 
@@ -91,8 +91,8 @@ Feature: Condition Check Tab Test Plan
 
         #Variation B
         And user selects the "Current Record" tab
-        Then a leave confirmation dialogue should appear #needs StepDef
-        And user clicks the "cancel" button  #might not work
+        Then a leave confirmation dialogue should appear  
+        And user clicks the "cancel" button   
         Then the "Condition Check/Assessment Reference Number" field should contain "CQA103.4"
 
         ## Variation D
@@ -122,7 +122,7 @@ Feature: Condition Check Tab Test Plan
         Given the user is in the "My CollectionSpace" page
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button  
         And user clicks the "Create new" button
 
         # Variation A
@@ -352,9 +352,9 @@ Feature: Condition Check Tab Test Plan
         And user goes to the record with identification number "CQA103_NE"
         And user selects the "Condition" tab
 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button  
         And clicks on the Create button
-        And user enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field #might not work 
+        And user enters "CQA103.7" in the "Condition Check/Assessment Reference Number" field   
         And the user saves the record
         
         And user clicks the "Delete Relation" button on the row that reads "CQA103.7" #Green "X" button. Needs step def
@@ -374,11 +374,11 @@ Feature: Condition Check Tab Test Plan
         Then delete confirmation dialogue should appear
         And user clicks on the delete button
         Then "CQA103.7" should not appear in the "Procedures" area
-        Then "CQA103.7" should not appear in the "Related Condition Check Records" area #needs Stepdef #not logged
+        Then "CQA103.7" should not appear in the "Related Condition Check Records" area   #not logged
 
         And user goes to the record with identification number "CQA103.7"
         And user selects the "Condition" tab 
-        Then "CQA103_NE" should not appear in the "Related Condition Check Records" area  #needs Stepdef
+        Then "CQA103_NE" should not appear in the "Related Condition Check Records" area   
         And user selects the "Current Record" tab
 
         And the user clicks the delete button
@@ -393,22 +393,22 @@ Feature: Condition Check Tab Test Plan
         Then "CQA103_NE" should be in the "Identification Number" field
 
         And user selects the "Condition" tab 
-        And user clicks the "Add record" button #needs step def
+        And user clicks the "Add record" button  
         And clicks on the Create button
-        And user enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field #might not work 
+        And user enters "CQA103.8" in the "Condition Check/Assessment Reference Number" field   
         And the user saves the record
         And the user clicks on result with text "CQA103.8"
         
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks cancel button # click cancel
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And user clicks the "Delete this relation" button
-        Then a delete confirmation dialogue should appear #needs Stepdef
+        Then a delete confirmation dialogue should appear  
         And user clicks close button # close button == close symbol?
-        Then the dialogue should be dismissed #needs stepdef
+        Then the dialogue should be dismissed  
         Then the "Related Condition Check Records" area should contain "CQA103.8"
 
         And user clicks the "Delete this relation" button
@@ -416,7 +416,7 @@ Feature: Condition Check Tab Test Plan
         And the user clicks the delete button 
         Then the deletion should be confirmed in a dialogue
         # Then the record editor should no longer be displayed (below list)
-        Then "CQA103.8" should not appear in the "Procedures" area  #needs Stepdef
+        Then "CQA103.8" should not appear in the "Procedures" area   
         Then "CQA103.8" should not appear in the "Related Condition Check Records" area
 
         And user goes to the record with identification number "CQA103.8"

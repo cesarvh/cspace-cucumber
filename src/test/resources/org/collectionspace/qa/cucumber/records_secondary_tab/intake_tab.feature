@@ -17,7 +17,7 @@ Feature: Intake Tab
 
 
   # Begin Test 3:
-    And user clicks the "Add record" button #needs step def
+    And user clicks the "Add record" button  
     And user clicks the "close" button 
     Then no changes to the record will occur 
 
@@ -368,9 +368,9 @@ Feature: Intake Tab
 
 
     And user selects the "Intake" tab 
-    And user clicks the "Add record" button #needs step def
+    And user clicks the "Add record" button  
     And clicks on the Create button
-    And user enters "0413199525" in the "Intake Entry Number" field #might not work 
+    And user enters "0413199525" in the "Intake Entry Number" field   
     And the user saves the record
    
     And user clicks the "Delete Relation" button on the row that reads "0413199525" #Green "X" button. Needs step def
@@ -414,13 +414,13 @@ Feature: Intake Tab
 
     
     And user clicks the "Delete this relation." button
-    Then a delete confirmation dialogue should appear #needs Stepdef
+    Then a delete confirmation dialogue should appear  
     And user clicks cancel button 
     Then the dialogue should be dismissed 
     Then the "Related Intake Records" area should contain "0413199527"
 
     And user clicks the "Delete this relation." button
-    Then a delete confirmation dialogue should appear #needs Stepdef
+    Then a delete confirmation dialogue should appear  
     And user clicks close button 
     Then the dialogue should be dismissed 
     Then the "Related Intake Records" area should contain "0413199527"

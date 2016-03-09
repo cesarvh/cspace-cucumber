@@ -17,7 +17,7 @@ Feature: Advanced Search ­Cataloging
         And user selects "dry" from the "Form" drop down box
         And user enters "Cesar Villalobos" in the "Inscriber" field
         And user selects "Cesar Villalobos" from autocomplete options
-        And user enters "Drawings" in the "Inscription Method" field # Might not work bc not explicitly named "Inscription Method" but rather just #method
+        And user enters "Drawings" in the "Inscription Method" field   bc not explicitly named "Inscription Method" but rather just #method
         And user enters "Polyester" in the "Material" field
         And user selects "forgery" from the "Object Status" drop down box
         And user selects "larva" from the "Phase" drop down box
@@ -110,7 +110,7 @@ Feature: Advanced Search ­Cataloging
         # Inscription Method (Non­Textual Inscription) 
         And clicks the "Advanced Search" Button
         And user selects "Cataloging" from the "Record Type Select" drop down box
-        And user enters "Drawings" in the "Inscription Method" field # Might not work bc not explicitly named "Inscription Method" but rather just #method
+        And user enters "Drawings" in the "Inscription Method" field   bc not explicitly named "Inscription Method" but rather just #method
         And clicks the "search" button
         Then the search results should contain "CQA72.1"
 
