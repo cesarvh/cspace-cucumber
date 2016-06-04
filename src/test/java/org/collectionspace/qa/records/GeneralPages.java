@@ -8,7 +8,7 @@ public class GeneralPages extends Record{
         fieldSelectorByLabel.put("Advanced Search search",   "csc-advancedSearch-searchButton");
         fieldSelectorByLabel.put("Record last modified by",  "csc-collection-object-updatedBy");
         fieldSelectorByLabel.put("Earliest Modified Date",   "csc-loanin-updatedAtStart");
-
+        fieldSelectorByLabel.put("Edit existing advanced search", "csc-advancedSearch-toggle");
     	xpathMap.put("Ok", "//input[@value=\"OK\"]");
         xpathMap.put("Delete", "//input[@value=\"Delete\"]");
     }

@@ -1,5 +1,6 @@
 package org.collectionspace.qa.cucumber.stepDefinitions;
 
+// import org.json.*;
 
 import java.util.*;
 import java.text.SimpleDateFormat;
@@ -57,6 +58,60 @@ public class StepDefs {
         login(driver, BASE_URL);
 
     }
+
+    // And clicks on the "Recent searches" entry containing "{"initialState":false, "keywords":"goodbye"}" #double check
+    @And("^clicks on the recent searches entry containing \"([^\"]*)\"$")
+    // @And("^clicks on the recent searches entry containing \"([^\"]*)\"}\"$")
+    public void and_clicks_on_the_recent_searches_entry_containing(String value) throws Throwable {
+        // value = what we want to search
+        // recordType = "AdvancedSearch";
+        // field name
+        // WebElement element = driver.findElement(By.xpath("//*[@id=\"all-content\"]/div/div[2]/div[2]/div/div[1]/a[text()='" + value + "'    ]"));
+        // String xpath = "//div[@class='csc-related-record csc-related-vocabularies']//td/a[contains(text(), '" + term +"')]";
+        // JSONObject obj = new JSONObject(value);
+        // // JSONArray arr = obj.getJSONArray("posts");
+        // StringBuilder s = new StringBuilder();
+        // s.append("{");
+
+
+        // String p = '{"initialState":false, "keywords":"goodbye"}';
+
+//         "{'initialState':false,
+//         'keywords':'goodbye'}"
+// {"initialState" :false,
+// "keywords" :"Goodbye" ,
+// "recordType" :"objectexit" ,
+// "fields" : {
+//     "exitNumbers" :[
+//         {"_primary" :true}
+//     ],
+//     "exitNotes" :[
+//     {"_primary" :true}
+//     ]
+//
+//
+//         for (int i = 0; i < obj.length(); i++) {
+//
+//         }
+
+
+        // span[contains(.,'Recent searches')]
+//div[@class='csc-searchTools-template cs-searchTools-template']/div/div/div/
+        String path = "//div[@class='csc-searchTools-template cs-searchTools-template']/div/div/div[1]/a[contains(text()='" + value + "')]";
+        // String path = "//*[@id=\"all-content\"]/div/div[2]/div[2]/div/div[1]/a[contains(text()='" + p + "')]";
+        WebElement element = driver.findElement(By.xpath(path));
+        element.click();
+
+            // WebElement element = driver.findElement(By.xpath(""))
+        // String xpath = "//li[@class='csc-tabs-tab-link cs-tabs-tab-link']/span[text()='" + tab + "']";
+
+        //
+        // WebElement element = findElementWithLabel(driver, recordType, )
+        // if
+
+    }
+
+
 
     @And("^enters today's date in the \"([^\"]*)\" \"([^\"]*)\" field$")
     public void enters_todays_date_in_field(String recordType, String fieldName) throws Throwable {
@@ -332,20 +387,16 @@ public class StepDefs {
         fillRequiredFieldsFor(recordType, driver);
     }
 
-    @And("^(?:the user |user )?clicks on \"([^\"]*)\" from autocomplete options$")
-    public void clicks_on_from_autocomplete_options(String option) throws Throwable {
-        // //*[@id="primaryTab"]/div/div[3]/div[2]/div[2]/div[2]/div/div[2]/input[2]
+
+    @And("^enters \"([^\"]*)\" in the \"([^\"]*)\" \"([^\"]*)\" autocomplete field$")
+    public void clicks_on_from_autocomplete_options(String value, String recordType, String fieldName) throws Throwable {
+
         try {
-        new WebDriverWait(driver, 10).until(
-                        ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
-        String xpath = "//li[@class=\'cs-autocomplete-matchItem csc-autocomplete-matchItem']/span[text()=\'" + option + "\']";
-        WebElement x = driver.findElement(By.xpath(xpath));
-        // .click();
-        // WebElement elem =
-        fillAutocompleteField(driver, x, option);
-    } catch (Exception e) {
-        log(e.getMessage());
-    }
+            WebElement element = findElementWithLabel(driver, recordType, fieldName);
+            fillAutocompleteField(driver, element, value);
+        } catch (Exception e) {
+            log(e.getMessage());
+        }
 
 
     }

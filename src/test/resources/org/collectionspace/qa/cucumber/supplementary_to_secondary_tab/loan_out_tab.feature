@@ -37,7 +37,7 @@ Feature: Loan Out Secondary Tab
     Then the "Delete this relation." button at the "bottom" of the page "should" be clickable
       And selects the "Current Record" tab
       And clicks the "Save" button
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "1234321" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on result with text "1234321"
@@ -48,7 +48,7 @@ Feature: Loan Out Secondary Tab
 
   #Test 3
   Scenario: Search to Relate Dialog
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "1234231" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on result with text "1234231"

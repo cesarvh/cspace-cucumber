@@ -43,40 +43,67 @@ public class Utilities {
 		return foundElements;
 	}
 
+    /**
+     * Fills an autocomplete field with a given value.
+     *
+     * @param driver                      The WebDriver instance we are working with
+     * @param value                       The new value, or null to generate a non-empty value
+     * @param autocompleteInputElement    The WebElement into which we are inputting the value
+     */
     public static void fillAutocompleteField(WebDriver driver, WebElement autocompleteInputElement, String value) {
-		// if (value == null) {
-		// 	value = generateAutocompleteValue();
-		// }
 
-		// WebElement autocompleteInputElement = findFollowingSiblingAutocompleteInputElement(element);
+        if (autocompleteInputElement != null) {
+            autocompleteInputElement.click();
+            autocompleteInputElement.sendKeys(value);
 
-		if (autocompleteInputElement != null) {
-			autocompleteInputElement.click();
-			autocompleteInputElement.sendKeys(value);
+            new WebDriverWait(driver, 10).until(
+                            ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
 
-			WebElement popupElement = driver.findElement(By.className("cs-autocomplete-popup"));
-			WebElement matchesElement = popupElement.findElement(By.className("csc-autocomplete-Matches"));
-			WebElement matchSpanElement = null;
-            List<WebElement> lst = matchesElement.findElements(By.tagName("li"));
-			for (WebElement candidateMatchElement : lst) {
-				WebElement candidateMatchSpanElement = candidateMatchElement.findElement(By.tagName("span"));
 
-				if (candidateMatchSpanElement.getText().equals(value)) {
-					matchSpanElement = candidateMatchSpanElement;
-					break;
-				}
-			}
+            WebElement popupElement = driver.findElement(By.className("cs-autocomplete-popup"));
+            WebElement matchesElement = popupElement.findElement(By.className("csc-autocomplete-Matches"));
+            WebElement matchSpanElement = null;
 
-			matchSpanElement.click();
+            new WebDriverWait(driver, 10).until(
+                            ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
 
-		}
-		else {
-			log("could not find autocomplete input");
-		}
+            for (WebElement candidateMatchElement : matchesElement.findElements(By.tagName("li"))) {
+                WebElement candidateMatchSpanElement = candidateMatchElement.findElement(By.tagName("span"));
 
-		// return value;
-	}
+                if (candidateMatchSpanElement.getText().equals(value)) {
+                    matchSpanElement = candidateMatchSpanElement;
+                    break;
+                }
+            }
 
+            if (matchSpanElement != null) {
+                // Click the value if found
+                new WebDriverWait(driver, 10).until(
+                                ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
+
+                matchSpanElement.click();
+
+            }
+            else {
+                // create a new authority item if one matching it does not already exist
+                new WebDriverWait(driver, 10).until(
+                                ExpectedConditions.visibilityOfElementLocated(By.className("cs-autocomplete-popup")));
+
+
+                WebElement addToPanelElement = popupElement.findElement(By.className("csc-autocomplete-addToPanel"));
+                WebElement firstAuthorityItem = addToPanelElement.findElement(By.tagName("li"));
+
+                firstAuthorityItem.click();
+
+                while(findElementsWithTimeout(driver, 0, By.className("cs-autocomplete-popup")).size() > 0) {
+                    // Wait for the popup to close
+                }
+            }
+        }
+        else {
+        }
+
+    }
 
 
 
@@ -164,6 +191,9 @@ public class Utilities {
         WebElement element;
         if (selector == null) {
             selector = record.getXPath(fieldName);
+            if (selector == null) { // if there is no xPath... Try to find by Name instead
+                selector = record.getNamePath(fieldName);
+            }
             element = driver.findElement(By.xpath(selector));
         } else {
             selector = record.getFieldSelectorByLabel(fieldName);
@@ -184,7 +214,7 @@ public class Utilities {
             fillInFields(driver, record.getFieldMap());
             updateSelectFields(driver, record.getSelectMap());
             fillInVocabFields(driver, record.getVocabMap());
-            //TODO ADD Dates and Checkboxes
+            // TO DO ADD Dates and Checkboxes
 
         } catch (Exception e) { log(e.getMessage()); }
     }
@@ -454,6 +484,9 @@ public class Utilities {
                 break;
             case "Condition Check":
                 record = new ConditionCheck();
+                break;
+            case "Cataloging":
+                record = new Cataloging();
                 break;
             case "Exhibition":
                 record = new Exhibition();

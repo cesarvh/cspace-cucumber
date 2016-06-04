@@ -1,5 +1,6 @@
 # Created by Cesar Villalobos on 9/15/15
-# Acquisition source is BROEKNENFkjadsngjkbdfhsjkghk
+# Acquisition source is not working as desired
+# Everything else works as of May 31
 @advancedsearch
 
 Feature: Advanced Search ­ Acquisition
@@ -26,8 +27,7 @@ Feature: Advanced Search ­ Acquisition
        And enters "CQA-71 Test" in the "Acquisition" "Field collection event name" field
        # # And enters "CQA-71 Acquisition Source" in the "Acquisition" "Acquisition Source" field
        # # And clicks on "CQA-71 Acquisition Source" from autocomplete options
-       And enters "CQA-71 Funding source" in the "Acquisition" "Funding Source" field
-       And clicks on "CQA-71 Funding source" from autocomplete options
+       And enters "CQA-71 Funding source" in the "Acquisition" "Funding Source" autocomplete field
        And enters "textbook" in the "Acquisition" "Credit Line" field
 
        # And scrolls up
@@ -73,8 +73,7 @@ Feature: Advanced Search ­ Acquisition
        #Acquisition Funding
        And clicks the "Advanced Search" button
        And selects "Acquisition" from the "AdvancedSearch" "record type" dropdown
-       And enters "CQA-71 Funding source" in the "Acquisition" "Search Funding source" field
-       And clicks on "CQA-71 Funding source" from autocomplete options
+       And enters "CQA-71 Funding source" in the "Acquisition" "Search Funding source" autocomplete field
        And clicks the "Advanced Search search" button
        Then the search results should contain "CQA71.1"
 #
@@ -156,7 +155,6 @@ Feature: Advanced Search ­ Acquisition
 
        Then close the browser
 
-       # ======== Tested and passes up until now =====
 
    Scenario: Boolean and Keyword Search
        Given user is on the "My CollectionSpace" page

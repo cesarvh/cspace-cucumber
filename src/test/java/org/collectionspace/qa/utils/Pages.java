@@ -41,7 +41,7 @@ public class Pages {
         pageUrls.put("Matrial Concepts", "concept.html?vocab=material_ca");
         pageUrls.put("Activity Concepts", "concept.html?vocab=activity");
         pageUrls.put("Local Persons", "person.html?vocab=person");
-        pageUrls.put("ULAN Persons", "person.html?vocab=ulan_pa");        
+        pageUrls.put("ULAN Persons", "person.html?vocab=ulan_pa");
         pageUrls.put("Local Storage Locations", "location.html?vocab=location");
         pageUrls.put("Offsite Storage Locations", "location.html?vocab=offsite_sla");
         pageUrls.put("Local Organizations", "organization.html?vocab=organization");

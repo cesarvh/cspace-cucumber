@@ -11,8 +11,8 @@ Feature: Advanced_Search - Extras
     #   And clicks on the Create button
     Then the titlebar should contain "Object Exit"
       And enters "Remember me 1234" in the "Object Exit" "Exit Number" field
-      And enters "James Adams" in the "Object Exit" "Depositor" vocab field #double check
-      And clicks on "James Adams" from autocomplete options
+      And enters "James Adams" in the "Object Exit" "Depositor" autocomplete field #double check
+    #   And clicks on "James Adams" from autocomplete options
       And enters "Goodbye" in the "Object Exit" "Exit Note" field
       And clicks the "Save" button
     Then the record is successfully saved
@@ -31,8 +31,8 @@ Feature: Advanced_Search - Extras
     Then the titlebar should contain "Advanced Search"
       And selects "all (AND)" from the "AdvancedSearch" "Field-based search" dropdown
       And enters "remember me 1234" in the "Object Exit" "Exit Number" field
-      And enters "James Blish" in the "Object Exit" "Depositor" vocab field
-      And clicks on "James Blish" from autocomplete options
+      And enters "James Blish" in the "Object Exit" "Depositor" autocomplete field
+    #   And clicks on "James Blish" from autocomplete options
       And clicks the "Advanced Search search" button
     Then the search results should not contain "Remember me 1234"
       And clicks on the "Recent searches" entry containing "{"initialState":false, "keywords":"goodbye"}" #double check

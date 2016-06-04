@@ -43,7 +43,7 @@ Feature: Permission Enforcement
   #Test35
   Scenario: Records still in edit mode
     Given user is logged in as "User I"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type C" from the top nav search record type select field
       And clicks on the top nav search submit button
     Then user is redirected to the "Find and Edit" page
@@ -105,9 +105,9 @@ Feature: Permission Enforcement
     Then close the browser
 
   #Test49
-  Scenario: My Collectionspace page
+  Scenario: My CollectionSpace page
     Given user is logged in as "User I" 
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
     Then dropdown in top nav search row should not contain "Record Type A"
     Then dropdown in top nav search row should contain "Record Type B"
     Then dropdown in top nav search row should contain "Record Type C"
@@ -183,7 +183,7 @@ Feature: Permission Enforcement
   #Test77
   Scenario: Predictive text in WRITE record
     Given user is logged in as "User II"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type C" from the top nav search record type select field
       And clicks on the top nav search submit button
       And deletes a "Vocabulary A" vocab field
@@ -222,7 +222,7 @@ Feature: Permission Enforcement
   #Test 85
   Scenario: Predictive Text in READ record
     Given user is logged in as "User III"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type B" from the top nav search record type select field
       And clicks on the top nav search submit button
       And clicks on a "Record Type B" record
@@ -236,7 +236,7 @@ Feature: Permission Enforcement
   #Test87
   Scenario: Predictive text in WRITE record
     Given user is logged in as "User III"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type C" from the top nav search record type select field
       And clicks on the top nav search submit button
       And clicks on a "Record Type C" record
@@ -257,7 +257,7 @@ Feature: Permission Enforcement
   #Test91
   Scenario: Behavior on NONE/READ combination vocabulary from WRITE record
     Given user is logged in as "User IV"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type A" from the top nav search record type select field
       And clicks on the top nav search submit button
       And clicks on a "Record Type A" record
@@ -279,7 +279,7 @@ Feature: Permission Enforcement
   #Test93
   Scenario: Behavior on NONE/WRITE combination vocabulary from WRITE record
     Given user is logged in as "User V"
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type A" from the top nav search record type select field
       And clicks on the top nav search submit button
       And clicks on a "Record Type A" record
@@ -301,7 +301,7 @@ Feature: Permission Enforcement
   #Test95
   Scenario: Behavior on READ/WRITE combination vocabulary from WRITE record
     Given user is logged in as "User VI" 
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And selects "Record Type A" from the top nav search record type select field
       And clicks on the top nav search submit button
       And clicks on a "Record Type A" record

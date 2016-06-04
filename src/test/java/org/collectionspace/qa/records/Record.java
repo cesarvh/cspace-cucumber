@@ -18,6 +18,8 @@ public abstract class Record {
     protected Map<String, String> xpathMap    = new HashMap<>();
     protected Map<String, String> dropDownMap = new HashMap<>();
 
+    protected Map<String, String> namePath = new HashMap<>();
+
     protected Map<String, String> fieldSelectorByLabel = new HashMap<>();
 
     public Map<String, String> getRequiredMap() {return requiredMap; }
@@ -40,6 +42,10 @@ public abstract class Record {
 
     public Map<String, String> getTickBoxMap() {
         return tickBoxMap;
+    }
+
+    public String getNamePath(String fieldLabel) {
+        return namePath.get(fieldLabel);
     }
 
     public String getFieldSelectorByLabel(String fieldLabel) {

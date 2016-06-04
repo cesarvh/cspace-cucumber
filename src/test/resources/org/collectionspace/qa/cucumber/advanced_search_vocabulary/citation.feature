@@ -40,4 +40,4 @@ Feature: Advanced Search - Citation
 #         Search the Modified Date field for today's date
 #     Expected:
 #         The Citation record you just created should appear in the search results
-#         (Note, 2/2016: Be aware of the way that Collectionspace handles the time difference between your location and UTC. I last modified a record on 2016-02-04T20:17:36:927 PST, but CSpace recorded the modification at 2016-02-05T00:17:36:927Z, i.e., just after midnight the next day. An advanced search on modified date - latest date February 4, 2016 does not detect the record. This is expected CSpace behavior, though confusing to users, perhaps. - Rick)
+#         (Note, 2/2016: Be aware of the way that CollectionSpace handles the time difference between your location and UTC. I last modified a record on 2016-02-04T20:17:36:927 PST, but CSpace recorded the modification at 2016-02-05T00:17:36:927Z, i.e., just after midnight the next day. An advanced search on modified date - latest date February 4, 2016 does not detect the record. This is expected CSpace behavior, though confusing to users, perhaps. - Rick)

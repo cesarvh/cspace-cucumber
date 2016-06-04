@@ -13,5 +13,10 @@ public class AdvancedSearch extends Record {
         fieldSelectorByLabel.put("Earliest Modified Date", "csc-conditioncheck-updatedAtStart");
         fieldSelectorByLabel.put("Latest Modified Date", "csc-conditioncheck-updatedAtEnd");
         fieldSelectorByLabel.put("Keyword Search", "csc-advancedSearch-query");
+
+
+
+
+        // input recent searches
     }
 }

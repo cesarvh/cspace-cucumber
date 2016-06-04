@@ -32,7 +32,7 @@ Feature: Navigating between Primary and Secondary Tabs
 
   #Test2: Repeating test1 for all secondary tabs
   Scenario: Cataloging secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -57,7 +57,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Condition secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -82,7 +82,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Exhibition secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -107,7 +107,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Intake secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -132,7 +132,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Group secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -157,7 +157,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Loan In secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -182,7 +182,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Loan Out secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -207,7 +207,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Media Handling secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -232,7 +232,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Loc/Mov/Inv secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -257,7 +257,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Object Exit secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button
@@ -282,7 +282,7 @@ Feature: Navigating between Primary and Secondary Tabs
     Then close the record
 
   Scenario: Valuation secondary tab
-    Given user is on the "My Collectionspace" page
+    Given user is on the "My CollectionSpace" page
       And enters "0923102" in the top nav search field
       And selects "Cataloging" from the top nav search record type select field
       And clicks on the top nav search submit button

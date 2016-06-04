@@ -34,7 +34,7 @@ public class Acquisition extends Record {
 
 
         dropDownMap.put("Acquisition Method",	        "csc-acquisition-acquisition-method");
-        dropDownMap.put("Acquisition Funding Currency", "//*[@id=\"termList-5\"]");
+        dropDownMap.put("Acquisition Funding Currency", "csc-acquisition-acquisitionFundingCurrency");
 
 //*[@id="primaryTab"]/div/div[3]/div[1]/div[2]/div[1]/div[1]/div[6]/div[2]/div/ul/li/input[3]
 
